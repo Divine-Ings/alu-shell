@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $(( $(printf "%d" "0x$(echo "$WATER" | tr "water" "01234" | xxd -p)") + $(printf "%d" "0x$(echo "$STIR" | tr "stir." "01234" | xxd -p)") ))
