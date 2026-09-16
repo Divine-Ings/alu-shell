@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c 'w="water";s="stir.";c="bestchol";a=int("".join(str(w.index(x)) for x in __import__("os").environ["WATER"]),5);b=int("".join(str(s.index(x)) for x in __import__("os").environ["STIR"]),5);f=lambda f,n:"" if n==0 else f(f,n//9)+c[n%9];print(f(f,a+b))'
+python3 -c 'exec("import os\nw=\"water\"\ns=\"stir.\"\nc=\"bestchol\"\na=int(\"\".join(str(w.index(x)) for x in os.environ[\"WATER\"]),5)\nb=int(\"\".join(str(s.index(x)) for x in os.environ[\"STIR\"]),5)\nn=a+b\nr=\"\"\nwhile n:r=c[n%9]+r;n//=9\nprint(r)")'
