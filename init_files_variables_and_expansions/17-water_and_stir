@@ -1,0 +1,2 @@
+#!/bin/bash
+a=$(echo "$WATER" | tr water 01234) ; b=$(echo "$STIR" | tr stir. 01234) ; echo "obase=9;ibase=5;$a+$b" | bc | tr 012345678 bestchol

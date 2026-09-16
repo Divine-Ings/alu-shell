@@ -1,0 +1,26 @@
+# Init Files, Variables and Expansions
+
+Shell scripting exercises covering aliases, environment variables,
+local variables, PATH, arithmetic, base conversion, text transformation,
+loops, and shell expansions.
+
+## Tasks
+
+- 0-alias
+- 1-hello_you
+- 2-path
+- 3-paths
+- 4-global_variables
+- 5-local_variables
+- 6-create_local_variable
+- 7-create_global_variable
+- 8-true_knowledge
+- 9-divide_and_rule
+- 10-love_exponent_breath
+- 11-binary_to_decimal
+- 12-combinations
+- 13-print_float
+- 14-decimal_to_hexadecimal
+- 15-rot13
+- 16-odd
+- 17-water_and_stir
