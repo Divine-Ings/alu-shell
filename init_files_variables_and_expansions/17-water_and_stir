@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c 'exec("import os\nw=\"water\"\ns=\"stir.\"\nc=\"bestchol\"\na=int(\"\".join(str(w.index(x)) for x in os.environ[\"WATER\"]),5)\nb=int(\"\".join(str(s.index(x)) for x in os.environ[\"STIR\"]),5)\nn=a+b\nr=\"\"\nwhile n:r=c[n%9]+r;n//=9\nprint(r)")'
+python3 -c 'exec("import os\nw=\"water\"\ns=\"stir.\"\nc=\"bestchol\"\na=int(\"\".join(str(w.index(x)) for x in os.environ[\"WATER\"]),5)\nb=int(\"\".join(str(s.index(x)) for x in os.environ[\"STIR\"]),5)\nn=a+b\nr=\"\"\nwhile n:\n r=c[n%9]+r\n n//=9\nprint(r)")'
