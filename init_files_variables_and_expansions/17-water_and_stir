@@ -1,2 +1,14 @@
 #!/bin/bash
-a=$(echo "$WATER" | tr water 01234) ; b=$(echo "$STIR" | tr stir. 01234) ; echo "obase=9;ibase=5;$a+$b" | bc | tr 012345678 bestchol
+WATER=$(echo "$WATER" | tr water 01234)
+STIR=$(echo "$STIR" | tr stir. 01234)
+WATER=$((5#$WATER))
+STIR=$((5#$STIR))
+NUM=$((WATER + STIR))
+RESULT=
+CHARS=bestchol
+while [ "$NUM" -gt 0 ]
+do
+DIGIT=$((NUM % 9))
+RESULT=${CHARS:$DIGIT:1}$RESULT
+NUM=$((NUM / 9))
+done
