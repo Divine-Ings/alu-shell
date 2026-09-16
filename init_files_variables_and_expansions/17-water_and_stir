@@ -1,14 +1,2 @@
 #!/bin/bash
-WATER=$(echo "$WATER" | tr water 01234)
-STIR=$(echo "$STIR" | tr stir. 01234)
-WATER=$((5#$WATER))
-STIR=$((5#$STIR))
-NUM=$((WATER + STIR))
-RESULT=
-CHARS=bestchol
-while [ "$NUM" -gt 0 ]
-do
-DIGIT=$((NUM % 9))
-RESULT=${CHARS:$DIGIT:1}$RESULT
-NUM=$((NUM / 9))
-done
+python3 -c 'w="water";s="stir.";c="bestchol";a=int("".join(str(w.index(x)) for x in __import__("os").environ["WATER"]),5);b=int("".join(str(s.index(x)) for x in __import__("os").environ["STIR"]),5);f=lambda f,n:"" if n==0 else f(f,n//9)+c[n%9];print(f(f,a+b))'
