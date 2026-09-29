@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Check the existence and type of the school file
 
 if [ -e "school" ]
 then

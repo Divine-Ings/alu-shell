@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Display superstitious numbers from 1 to 20
 
 i=1
 

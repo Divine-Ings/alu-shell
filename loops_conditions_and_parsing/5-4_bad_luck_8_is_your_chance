@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Display bad luck on 4 and good luck on 8
 
 i=1
 
