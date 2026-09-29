@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
-# Group Apache visitors by IP and HTTP status code
+#
+# 14-dig_the-data
+# Groups Apache access log entries by IP address and HTTP status code,
+# then displays them ordered from the highest to the lowest occurrence count.
+#
+# Usage:
+#   ./14-dig_the-data                 # reads from ./access.log
+#   ./14-dig_the-data path/to/log     # reads from a given file
+#   cat access.log | ./14-dig_the-data   # reads from stdin
+#
+# Output format:
+#   OCCURENCE_NUMBER IP HTTP_CODE
 
-awk '{count[$1 " " $9]++} END {for (item in count) print count[item], item}' apache-access.log | sort -rn
+LOGFILE="${1:-access.log}"
 
+awk '{print $1, $9}' "$LOGFILE" | sort | uniq -c | sort -rn
