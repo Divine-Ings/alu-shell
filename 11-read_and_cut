@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+while IFS=: read -r username password userid groupid info home directory
+do
+    echo "$username:$userid:$home"
+done < /etc/passwd
