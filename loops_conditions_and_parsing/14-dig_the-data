@@ -1,10 +1,3 @@
 #!/usr/bin/env bash
-# Group visitors by IP address and HTTP status code
-awk '{
-    count[$1 " " $9]++
-}
-END {
-    for (item in count) {
-        printf "%d %s\n", count[item], item
-    }
-}' apache-access.log | sort -rn
+# Group visitors by IP and HTTP status code
+awk '{count[$1 " " $9]++} END {for (item in count) print count[item], item}' apache-access.log | sort -rn
